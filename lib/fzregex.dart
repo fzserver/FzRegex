@@ -1,3 +1,3 @@
 library fzregex;
 
-export 'utils/validation.dart';
+export 'utils/fzregex.dart';

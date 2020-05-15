@@ -12,19 +12,41 @@ fzregex: <latest_version>
 
 ## Validating:
 
-- Phone
+- Username
 - Name
-- Postal Code
 - Email
 - URL
+- Phone
+- Hexadecimal
+- Image vector
+- Image
+- Audio
+- Video
+- Txt
+- Document
+- Excel
+- PPT
+- APK
+- PDF
+- HTML
+- DateTime
+- Binary
+- MD5
+- SHA1
+- SHA256
+- SSN (Social Security Number)
+- IPv4
+- IPv6
+- ISBN 10 & 13
+- Github repository
+- Passport No.
 - Currency
-- IP
-- Date
-- Time
+- Numeric Only (No Whitespace & Symbols)
+- Alphabet Only (No Whitespace & Symbols)
+- Types of Passwords
+- Postal Code
 - HTML Tags
-- Password (Strong)
-- Password (Medium)
-- Credit Card
+- Credit/Debit Card
 
 For Dart/Flutter developers.
 [Fz Regex Validator at pub.dartlang.org](https://pub.dartlang.org/packages/ "Fz Regex")
@@ -35,24 +57,14 @@ Usage is pretty simple just pass a phone, date, email... to its validation metho
 
 ```dart
 import 'package:fzregex/fzregex.dart';
+import 'package:fzregex/utils/pattern.dart';
 
 main() {
-  print( validator.email('example@example.co.in')); // true
-
-  print(validator.url('https://storage.googleapis.com/frazilegradients/assets/data/gradients.php')); // true
-
-  print(validator.currency('£1000')); // true
-
-  print(validator.ip('67.52.159.38')); // true
-
-  print(validator.time('14:34 GMT -5')); // true
-
-  print( validator.htmlTags('<strong>Bold</strong>\n'
-          '<em>Emphazied</em>\n'
-          '<b>Bold</b>\n'
-          '<i>Italics</i>\n'
-          '<hr />')
-  ); // true
+  Fzregex.hasMatch('Krishna_Ra1', FzPattern.username);
+  Fzregex.hasMatch('+91 7009046544', FzPattern.phone);
+  Fzregex.hasMatch('krishna@gmail.com', FzPattern.email);
+  Fzregex.hasMatch('https://youtube.com/', FzPattern.url);
+  Fzregex.hasMatch('\$ 100,000', FzPattern.currency);
 }
 ```
 
