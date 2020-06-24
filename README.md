@@ -2,6 +2,8 @@
 
 Validating: Phone, Name, PostalCode, Email, URL, Currency, IP Address, Date, Time, HTMLTags, Password (Strong), Password (Medium), Credit Card.\n for Dart/Flutter Developers.
 
+[![Pub](https://img.shields.io/pub/v/google_polyline_algorithm.svg)](https://pub.dartlang.org/packages/fzregex)
+
 ## Installation
 
 In the `dependencies:` section of your `pubspec.yaml`, add the following line:
@@ -14,9 +16,10 @@ fzregex: <latest_version>
 
 - Username
 - Name
+- Only Numbers
 - Email
 - URL
-- Phone
+- Phone Number
 - Hexadecimal
 - Image vector
 - Image
@@ -73,6 +76,8 @@ main() {
 This project needs you! If you would like to support this project's further upgradations, the creator of this project or the continuous maintenance of this project, feel free to donate. Your donation is highly appreciated (and I love food, coffee and beer). Thank you!
 
 **Paypal**
+
+[![PayPal](https://img.shields.io/static/v1?label=PayPal&message=Donate&color=blue&logo=paypal&style=for-the-badge&labelColor=black)](https://www.paypal.me/frazile)
 
 **For All Developers**
 
