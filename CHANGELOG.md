@@ -1,6 +1,6 @@
 ## 1.0.3 - 22 October 2020.
 
-# Added New Regex => 
+*Added New Regex =>*
 - National Insurance Numbers in UK
 - UK post codes
 - SSN Number
