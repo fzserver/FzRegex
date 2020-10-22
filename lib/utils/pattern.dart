@@ -4,8 +4,6 @@
 /// Example: Pattern : Email -> 'This is your email : test@gmail.com' will return `false`, but 'test@gmail.com' will return `true`
 class FzPattern {
   /// Username regex
-  /// Requires minimum 3 character
-  /// Allowing "_" and "." in middle of name
   static Pattern username = r'^[a-zA-Z0-9][a-zA-Z0-9_.]+[a-zA-Z0-9]$';
 
   /// Name regex
@@ -194,4 +192,27 @@ class FzPattern {
 
   /// Only Numbers
   static Pattern onlynumber = r'^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$';
+
+  /// Matches national insurance numbers in the UK
+  static final RegExp ninValidator =
+      RegExp(r"^\s*[a-zA-Z]{2}(?:\s*\d\s*){6}[a-zA-Z]?\s*$");
+
+  /// Matches UK post codes
+  static final RegExp postCodeValidator = RegExp(
+      r"([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})");
+
+  /// Matches SSN Number
+  static final RegExp ssnValidator =
+      RegExp(r"^(?!000|666)[0-8][0-9]{2}-(?!00)[0-9]{2}-(?!0000)[0-9]{4}$");
+
+  /// Matches US Zip Code Validation
+  static final RegExp uszipcodeValidator = RegExp(r"^[0-9]{5}(?:-[0-9]{4})?$");
+
+  /// Matches International Phone Numbers
+  static final RegExp internationalPhoneNumValidator =
+      RegExp(r"^\+(?:[0-9] ?){6,14}[0-9]$");
+
+  /// Matches Canada Postal Code Validation
+  static final RegExp canadaPostalCodeValidator =
+      RegExp(r"^(?!.*[DFIOQU])[A-VXY][0-9][A-Z] ?[0-9][A-Z][0-9]$");
 }
