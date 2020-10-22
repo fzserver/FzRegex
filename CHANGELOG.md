@@ -1,9 +1,18 @@
+## 1.0.3 - 22 October 2020.
+
+# Added New Regex => 
+- National Insurance Numbers in UK
+- UK post codes
+- SSN Number
+- US Zip Code
+- International Phone Numbers
+- Canada Postal Code
+
 ## 1.0.2 - 23 May 2020.
 
 - Added New Regex => 
 - Only Numbers
 - Email Regex updated
-- 
 
 ## 1.0.1 - 16 May 2020.
 
