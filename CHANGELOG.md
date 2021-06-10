@@ -1,4 +1,4 @@
-## 1.0.4 - 10 June 2021.
+## 2.0.0 - 10 June 2021.
 
 _Migrated to null Safety =>_
 
