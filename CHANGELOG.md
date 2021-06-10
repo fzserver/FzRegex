@@ -1,6 +1,13 @@
+## 1.0.4 - 10 June 2021.
+
+_Migrated to null Safety =>_
+
+- National Insurance Numbers in UK
+
 ## 1.0.3 - 22 October 2020.
 
-*Added New Regex =>*
+_Added New Regex =>_
+
 - National Insurance Numbers in UK
 - UK post codes
 - SSN Number
@@ -10,7 +17,7 @@
 
 ## 1.0.2 - 23 May 2020.
 
-- Added New Regex => 
+- Added New Regex =>
 - Only Numbers
 - Email Regex updated
 
