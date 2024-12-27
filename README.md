@@ -108,13 +108,13 @@ void main() {
 If you find this project helpful, consider supporting its development:
 
 ### Crypto Donations
-	• Bitcoin (BTC): bc1qfz3nxgnq05zhdfnt7zuzzx9mhmejrm8sv2sfq8
-  • Ethereum (ETH): 0x27dC4A17C23A22520A395457202CaEae9bFCDAC0
-  • Tron (TRX): TRrgqPQdFMJ9Lmik2ACKSM3CnnYDDAeYJv
-  • BNB Smart Chain (BSC): 0x27dC4A17C23A22520A395457202CaEae9bFCDAC0
-  • Solana (SOL): 98MhEWJ6XQf34cg3vcmh8Ggm7u51bmUvWNKzUQr9MmEt
-  • Polygon (POL): 0x27dC4A17C23A22520A395457202CaEae9bFCDAC0
-  • NEAR Token (NEAR): frazile.near
+	  • Bitcoin (BTC): bc1qfz3nxgnq05zhdfnt7zuzzx9mhmejrm8sv2sfq8
+  	• Ethereum (ETH): 0x27dC4A17C23A22520A395457202CaEae9bFCDAC0
+  	• Tron (TRX): TRrgqPQdFMJ9Lmik2ACKSM3CnnYDDAeYJv
+  	• BNB Smart Chain (BSC): 0x27dC4A17C23A22520A395457202CaEae9bFCDAC0
+  	• Solana (SOL): 98MhEWJ6XQf34cg3vcmh8Ggm7u51bmUvWNKzUQr9MmEt
+  	• Polygon (POL): 0x27dC4A17C23A22520A395457202CaEae9bFCDAC0
+  	• NEAR Token (NEAR): frazile.near
 
 ## 🧑‍💻 Developed By
 
