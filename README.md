@@ -1,138 +1,127 @@
-# Frazile Regex
+# FzRegex
 
-Validating: Phone, Name, PostalCode, Email, URL, Currency, IP Address, Date, Time, HTMLTags, Password (Strong), Password (Medium), Credit Card.\n for Dart/Flutter Developers.
+A comprehensive regex validation library for Dart/Flutter developers. Validate formats such as:
 
-[![Pub](https://img.shields.io/pub/v/google_polyline_algorithm.svg)](https://pub.dartlang.org/packages/fzregex)
+- Phone Numbers  
+- Names  
+- Postal Codes  
+- Emails  
+- URLs  
+- IP Addresses  
+- Dates & Times  
+- Passwords (Strong & Medium)  
+- Credit/Debit Cards  
+- And many more!  
 
-## Installation
+[![Pub Version](https://img.shields.io/pub/v/fzregex.svg)](https://pub.dev/packages/fzregex)  
+[![GitHub Repo](https://img.shields.io/github/stars/FrazileDevelopers/FzRegex.svg?style=social)](https://github.com/FrazileDevelopers/FzRegex)
 
-In the `dependencies:` section of your `pubspec.yaml`, add the following line:
+---
+
+## 🚀 Installation
+
+Add the package to the `dependencies:` section of your `pubspec.yaml`:
 
 ```yaml
-fzregex: <latest_version>
+dependencies:
+  fzregex: <latest_version>
 ```
 
-## Validating:
+Then Run
+```sh
+flutter pub get
+```
 
-- Username
-- Name
-- Only Numbers
-- Email
-- URL
-- Phone Number
-- Hexadecimal
-- Image vector
-- Image
-- Audio
-- Video
-- Txt
-- Document
-- Excel
-- PPT
-- APK
-- PDF
-- HTML
-- DateTime
-- Binary
-- MD5
-- SHA1
-- SHA256
-- SSN (Social Security Number)
-- IPv4
-- IPv6
-- ISBN 10 & 13
-- Github repository
-- Passport No.
-- Currency
-- Numeric Only (No Whitespace & Symbols)
-- Alphabet Only (No Whitespace & Symbols)
-- Types of Passwords
-- Postal Code
-- HTML Tags
-- Credit/Debit Card
+## 🌟 Features
 
-For Dart/Flutter developers.
-[Fz Regex Validator at pub.dartlang.org](https://pub.dartlang.org/packages/ "Fz Regex")
+FzRegex offers validation for a wide range of data formats, including:
 
-## Usage
+### 📝 User Input
+- Username  
+- Name  
+- Only Numbers (Numeric input without whitespace or symbols)  
+- Passwords (Strong & Medium)  
 
-Usage is pretty simple just pass a phone, date, email... to its validation method, see the example below
+### 🖼️ Files & Media
+- Images: PNG, JPEG, SVG  
+- Audio: MP3, WAV, etc.  
+- Video: MP4, AVI, etc.  
+- Text Files (TXT)  
+- Documents: Word (DOC), Excel (XLS), PowerPoint (PPT), PDF  
+- APK Files  
+
+### 🔍 Identifiers
+- Social Security Numbers (SSN)  
+- International Standard Book Numbers (ISBN-10 & ISBN-13)  
+- Passport Numbers  
+- IP Addresses: IPv4, IPv6  
+
+### 🌐 Web
+- Emails  
+- URLs  
+- GitHub Repository Names  
+- HTML Tags  
+
+### 💰 Financial
+- Credit/Debit Card Numbers  
+- Currency Formats  
+- Hash Formats: MD5, SHA1, SHA256  
+
+### 🧩 Miscellaneous
+- Postal Codes  
+- Date/Time Validation  
+- Binary Numbers  
+
+For a detailed list of patterns, visit the [patterns file](https://github.com/FrazileDevelopers/FzRegex/blob/main/lib/utils/pattern.dart).
+
+## 🛠️ Usage
+
+Here’s how you can use FzRegex in your Dart/Flutter project:
 
 ```dart
 import 'package:fzregex/fzregex.dart';
 import 'package:fzregex/utils/pattern.dart';
 
-main() {
-  Fzregex.hasMatch('Krishna_Ra1', FzPattern.username);
-  Fzregex.hasMatch('+91 7009046544', FzPattern.phone);
-  Fzregex.hasMatch('krishna@gmail.com', FzPattern.email);
-  Fzregex.hasMatch('https://youtube.com/', FzPattern.url);
-  Fzregex.hasMatch('\$ 100,000', FzPattern.currency);
+void main() {
+  // Validate a username
+  bool isValidUsername = FzRegex.hasMatch('Frazile', FzPattern.username);
+  
+  // Validate a phone number
+  bool isValidPhone = FzRegex.hasMatch('+91 1234567890', FzPattern.phone);
+
+  // Validate an email
+  bool isValidEmail = FzRegex.hasMatch('frazilex@frazile.app', FzPattern.email);
+
+  // Validate a URL
+  bool isValidURL = FzRegex.hasMatch('https://frazile.com/', FzPattern.url);
+
+  // Validate currency format
+  bool isValidCurrency = FzRegex.hasMatch('\$ 100,000', FzPattern.currency);
+
+  print(isValidUsername); // true
+  print(isValidPhone);    // true
 }
 ```
 
-## 💰 Donations
+## ❤️ Support the Project
 
-This project needs you! If you would like to support this project's further upgradations, the creator of this project or the continuous maintenance of this project, feel free to donate. Your donation is highly appreciated (and I love food, coffee and beer). Thank you!
+If you find this project helpful, consider supporting its development:
 
-**Paypal**
+### Crypto Donations
+	• Bitcoin (BTC): bc1qfz3nxgnq05zhdfnt7zuzzx9mhmejrm8sv2sfq8
+ • Ethereum (ETH): 0x27dC4A17C23A22520A395457202CaEae9bFCDAC0
+ • Tron (TRX): TRrgqPQdFMJ9Lmik2ACKSM3CnnYDDAeYJv
+ • BNB Smart Chain (BSC): 0x27dC4A17C23A22520A395457202CaEae9bFCDAC0
+ • Solana (SOL): 98MhEWJ6XQf34cg3vcmh8Ggm7u51bmUvWNKzUQr9MmEt
+ • Polygon (POL): 0x27dC4A17C23A22520A395457202CaEae9bFCDAC0
+ • NEAR Token (NEAR): frazile.near
 
-[![PayPal](https://img.shields.io/static/v1?label=PayPal&message=Donate&color=blue&logo=paypal&style=for-the-badge&labelColor=black)](https://www.paypal.me/frazile)
+## 🧑‍💻 Developed By
 
-**For All Developers**
+Parth Aggarwal CEO & Developer at Frazile Inc.
 
-* **[Donate $5](https://www.paypal.me/frazile/USD5)**: Thank's for creating this project, here's a coffee or juice or beer for you!
-* **[Donate $10](https://www.paypal.me/frazile/USD10)**: Wow, I am stunned. Let me take you to the movies.
-* **[Donate $15](https://www.paypal.me/frazile/USD15)**: I really appreciate your work, let's grab some lunch!
-* **[Donate $20](https://www.paypal.me/frazile/USD20)**: That's some awesome stuff you did right there, Pizza/Burger is on me!
-* **[Donate $25](https://www.paypal.me/frazile/USD25)**: Thank's for the code, get a Firebase Flame Plan for your next project.
-* **[Donate $30](https://www.paypal.me/frazile/USD30)**: I really really want to support this project, great job!
-* **[Donate $35](https://www.paypal.me/frazile/USD35)**: You are the man! This project saved me hours (if not days) of struggle and hard work, simply awesome!
-* **[Donate $40](https://www.paypal.me/frazile/USD40)**: I want to learn more let's connect, Dinner is on me!
-* **[Donate $45](https://www.paypal.me/frazile/USD45)**: Many many thanks for the flutter project in dart language.
-* **[Donate $50](https://www.paypal.me/frazile/USD50)**: Thanks to tell the working of Firebase Cloud Functions in JavaScript/TypeScript & using of Nodejs & Firebase CLI!
-* **[Donate $60](https://www.paypal.me/frazile/USD60)**: Let me buy u some Storage Server, about say 100 GB!
-* **[Donate $70](https://www.paypal.me/frazile/USD70)**: Thank's for creating this plugin/package/code, here's some bugs for Domain Name with SSL, Storage Server(150 GB)!
-* **[Donate $80](https://www.paypal.me/frazile/USD80)**: Thank's for creating this plugin/package/code, here's some bugs for Domain Name with SSL, Storage Server(150 GB), Lights billings!
-* **[Donate $90](https://www.paypal.me/frazile/USD90)**: Thank's for creating this plugin/package/code, here's some bugs for Domain Name with SSL, Storage Server(150 GB), Lights & Internet billings!
-* **[Donate $100](https://www.paypal.me/frazile/USD100)**: Thank's for creating the best plugin/package/code, here's a 2TB HDD for your Storage Server is on me!
-* **[Donate $299](https://www.paypal.me/frazile/USD299)**: Thank's buddy for the awesome plugin/package/app/game developed, buy Apple TV 4K for yourself!
-* **[Donate $799](https://www.paypal.me/frazile/USD799)**: Thank's buddy for the awesome plugin/package/app/game developed, buy Apple Watch for yourself!
-* **[Donate $1500](https://www.paypal.me/frazile/USD1500)**: Thank's buddy for the awesome plugin/package/app/game developed, buy Apple iPhone for yourself!
-* **[Donate $2000](https://www.paypal.me/frazile/USD2000)**: Thank's buddy for the awesome plugin/package/app/game developed, buy Apple iPad for yourself!
-* **[Donate $2500](https://www.paypal.me/frazile/USD2500)**: Thank's buddy for the awesome plugin/package/app/game developed, buy Apple Mac Mini & Storage Server for yourself!
-* **[Donate $3000](https://www.paypal.me/frazile/USD3000)**: Thank's buddy for the awesome plugin/package/app/game developed, buy Apple MacBook Pro for yourself!
-* **[Donate $7000](https://www.paypal.me/frazile/USD7000)**: Thank's buddy for the awesome plugin/package/app/game developed, buy Apple iMac Pro 5K for yourself!
+## 🧑‍💻 Developed By
 
-**For UK Developers**
-
-* **[Donate £5](https://www.paypal.me/frazile/GBP5)**: Thank's for creating this project, here's a coffee or juice or beer for you!
-* **[Donate £10](https://www.paypal.me/frazile/GBP10)**: Wow, I am stunned. Let me take you to the movies.
-* **[Donate £15](https://www.paypal.me/frazile/GBP15)**: I really appreciate your work, let's grab some lunch!
-* **[Donate £20](https://www.paypal.me/frazile/GBP20)**: That's some awesome stuff you did right there, Pizza/Burger is on me!
-* **[Donate £25](https://www.paypal.me/frazile/GBP25)**: Thank's for the code, get a Firebase Flame Plan for your next project.
-* **[Donate £30](https://www.paypal.me/frazile/GBP30)**: I really really want to support this project, great job!
-* **[Donate £35](https://www.paypal.me/frazile/GBP35)**: You are the man! This project saved me hours (if not days) of struggle and hard work, simply awesome!
-* **[Donate £40](https://www.paypal.me/frazile/GBP40)**: I want to learn more let's connect, Dinner is on me!
-* **[Donate £45](https://www.paypal.me/frazile/GBP45)**: Many many thanks for the flutter project in dart language.
-* **[Donate £50](https://www.paypal.me/frazile/GBP50)**: Thanks to tell the working of Firebase Cloud Functions in JavaScript/TypeScript & using of Nodejs & Firebase CLI!
-* **[Donate £60](https://www.paypal.me/frazile/GBP60)**: Let me buy u some Storage Server, about say 100 GB!
-* **[Donate £70](https://www.paypal.me/frazile/GBP70)**: Thank's for creating this plugin/package/code, here's some bugs for Domain Name with SSL, Storage Server(150 GB)!
-* **[Donate £80](https://www.paypal.me/frazile/GBP80)**: Thank's for creating this plugin/package/code, here's some bugs for Domain Name with SSL, Storage Server(150 GB), Lights billings!
-* **[Donate £90](https://www.paypal.me/frazile/GBP90)**: Thank's for creating this plugin/package/code, here's some bugs for Domain Name with SSL, Storage Server(150 GB), Lights & Internet billings!
-* **[Donate £100](https://www.paypal.me/frazile/GBP100)**: Thank's for creating the best plugin/package/code, here's a 2TB HDD for your Storage Server is on me!
-* **[Donate £299](https://www.paypal.me/frazile/GBP299)**: Thank's buddy for the awesome plugin/package/app/game developed, buy Apple TV 4K for yourself!
-* **[Donate £799](https://www.paypal.me/frazile/GBP799)**: Thank's buddy for the awesome plugin/package/app/game developed, buy Apple Watch for yourself!
-* **[Donate £1500](https://www.paypal.me/frazile/GBP1500)**: Thank's buddy for the awesome plugin/package/app/game developed, buy Apple iPhone for yourself!
-* **[Donate £2000](https://www.paypal.me/frazile/GBP2000)**: Thank's buddy for the awesome plugin/package/app/game developed, buy Apple iPad for yourself!
-* **[Donate £2500](https://www.paypal.me/frazile/GBP2500)**: Thank's buddy for the awesome plugin/package/app/game developed, buy Apple Mac Mini & Storage Server for yourself!
-* **[Donate £3000](https://www.paypal.me/frazile/GBP3000)**: Thank's buddy for the awesome plugin/package/app/game developed, buy Apple MacBook Pro for yourself!
-* **[Donate £7000](https://www.paypal.me/frazile/GBP7000)**: Thank's buddy for the awesome plugin/package/app/game developed, buy Apple iMac Pro 5K for yourself!
-
-Of course, you can also choose what you want to donate, all donations are awesome!
-
-## Developed By
-
-```
-Parth Aggarwal CEO & Developer of Frazile Inc.
-```
+**Parth Aggarwal**  
+CEO & Developer at Frazile Inc.  
+[GitHub Profile](https://github.com/FrazileDevelopers)

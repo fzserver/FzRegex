@@ -1,14 +1,45 @@
 analyzer:
-#   exclude:
-#     - path/to/excluded/files/**
+  exclude:
+    # Uncomment and specify paths to exclude files or directories from analysis
+    # - path/to/excluded/files/**
 
-# Lint rules and documentation, see http://dart-lang.github.io/linter/lints
 linter:
   rules:
+    # Best practices
+    - avoid_print
     - cancel_subscriptions
     - hash_and_equals
-    - iterable_contains_unrelated_type
-    - list_remove_unrelated_type
     - test_types_in_equals
     - unrelated_type_equality_checks
+
+    # Style and conventions
+    - annotate_overrides
+    - always_declare_return_types
+    - always_put_control_body_on_new_line
+    - always_put_required_named_parameters_first
+    - avoid_empty_else
+    - avoid_field_initializers_in_const_classes
+    - avoid_redundant_argument_values
+    - avoid_relative_lib_imports
+    - avoid_setters_without_getters
+    - camel_case_extensions
+    - camel_case_types
+    - constant_identifier_names
+    - control_flow_in_finally
+    - empty_constructor_bodies
+    - library_names
+    - lines_longer_than_80_chars
+    - non_constant_identifier_names
+    - omit_local_variable_types
+    - prefer_typing_uninitialized_variables
+    - public_member_api_docs
+    - require_trailing_commas
+    - sort_constructors_first
+    - sort_unnamed_constructors_first
+
+    # Error prevention
+    - no_adjacent_strings_in_list
+    - prefer_const_constructors
+    - prefer_const_literals_to_create_immutables
+    - provide_deprecation_message
     - valid_regexps

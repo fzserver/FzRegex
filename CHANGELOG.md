@@ -1,3 +1,14 @@
+## 2.1.0 - 27 December 2024.
+### Added
+- Compatibility with Dart 2.17+ and Flutter 3.x.
+- Added `lints` for improved code quality.
+
+### Fixed
+- Improved documentation and formatting.
+
+### Removed
+- Deprecated support for older Dart versions.
+
 ## 2.0.0 - 10 June 2021.
 
 _Migrated to null Safety =>_
