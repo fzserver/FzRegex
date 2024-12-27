@@ -1,3 +1,7 @@
+## 2.1.1 - 27 December 2024.
+### Fixed
+- Minor Fixes
+
 ## 2.1.0 - 27 December 2024.
 ### Added
 - Compatibility with Dart 2.17+ and Flutter 3.x.
