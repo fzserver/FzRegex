@@ -1,6 +1,6 @@
 name: fzregex
 description: "A utility package for validating: Phone, Name, PostalCode, Email, URL, Currency, IP Address, Date, Time, HTMLTags, Password (Strong/Medium), and Credit Card. Designed for Dart/Flutter Developers."
-version: 2.1.1
+version: 2.2.0
 homepage: https://github.com/FrazileDevelopers/FzRegex
 
 environment:
@@ -13,7 +13,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  lints: ^2.0.0 # Add recommended Dart lints for better code quality
+  lints: ^6.0.0 # Add recommended Dart lints for better code quality
 
 flutter:
 

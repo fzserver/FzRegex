@@ -6,6 +6,8 @@
 /// - test@example.com => `true`
 /// - test@examplecom => `false`
 
+// ignore_for_file: lines_longer_than_80_chars
+
 class FzPattern {
   /// Username regex
   static const Pattern username = r'^[a-zA-Z0-9][a-zA-Z0-9_.]+[a-zA-Z0-9]$';
@@ -222,4 +224,159 @@ class FzPattern {
   /// Matches Canada Postal Code Validation
   static final RegExp canadaPostalCodeValidator =
       RegExp(r"^(?!.*[DFIOQU])[A-VXY][0-9][A-Z] ?[0-9][A-Z][0-9]$");
+
+  /// YouTube Video URL Regex
+  /// Examples: https://youtu.be/dQw4w9WgXcQ, https://www.youtube.com/watch?v=dQw4w9WgXcQ
+  static const Pattern youtubeUrl =
+      r'^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+$';
+
+  /// MAC Address Regex
+  /// Examples: 00:1A:2B:3C:4D:5E, 00-1A-2B-3C-4D-5E
+  static const Pattern macAddress =
+      r'^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$';
+
+  /// Time (24-hour format) Regex
+  /// Examples: 23:59, 00:00, 14:30
+  static const Pattern time24 = r'^([01]\d|2[0-3]):([0-5]\d)$';
+
+  /// Time (12-hour format with AM/PM) Regex
+  /// Examples: 1:45 PM, 12:00 am, 09:15 Am
+  static const Pattern time12 =
+      r'^(0?[1-9]|1[0-2]):[0-5][0-9](\s)?(?i)(AM|PM)$';
+
+  /// Color Code (Hex with optional alpha) Regex
+  /// Examples: #FFF, #FFFFFF, #FFFFFFFF, #1234
+  static const Pattern colorHexWithAlpha =
+      r'^#(?:[0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$';
+
+  /// Twitter Username Regex
+  /// Examples: @username, username
+  static const Pattern twitterUsername = r'^@?(\w){1,15}$';
+
+  /// UUID v4 Regex
+  /// Example: f47ac10b-58cc-4372-a567-0e02b2c3d479
+  static const Pattern uuidV4 =
+      r'^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$';
+
+  /// Slug (URL-friendly string) Regex
+  /// Examples: hello-world, flutter-tutorial, my-blog-post
+  static const Pattern slug = r'^[a-z0-9]+(?:-[a-z0-9]+)*$';
+
+  /// Firebase Push ID Regex
+  /// Example: -MabcdEfghIJKlmNoPqR
+  static const Pattern firebasePushId = r'^[a-zA-Z0-9_-]{20}$';
+
+  /// Emoji Regex (basic support for common emojis)
+  /// Examples: 😀, ❤️, 🚀
+  static const Pattern emoji = r'(\p{Emoji_Presentation}|\p{Emoji}\uFE0F)';
+
+  /// IPv4 CIDR Notation Regex
+  /// Examples: 192.168.1.0/24, 10.0.0.0/8
+  static const Pattern ipv4Cidr =
+      r'^(([0-9]{1,3}\.){3}[0-9]{1,3})\/([0-9]|[1-2][0-9]|3[0-2])$';
+
+  /// Base64 String Regex
+  /// Examples: SGVsbG8gd29ybGQ=, U29tZSBzdHJpbmc=
+  static const Pattern base64 =
+      r'^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$';
+
+  /// Bitcoin Address Regex (Legacy & SegWit)
+  /// Examples: 1BoatSLRHtKNngkdXEeobR76b53LETtpyT, 3J98t1WpEZ73CNmQviecrnyiWrnqRhWNLy
+  static const Pattern bitcoinAddress = r'^[13][a-km-zA-HJ-NP-Z1-9]{25,34}$';
+
+  /// Ethereum Address Regex
+  /// Examples: 0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe
+  static const Pattern ethereumAddress = r'^0x[a-fA-F0-9]{40}$';
+
+  /// Litecoin Address Regex
+  /// Examples: LZym3j8fS9bWf8o6RzKvA3tC2AedZ6W9aW
+  static const Pattern litecoinAddress = r'^[LM3][a-km-zA-HJ-NP-Z1-9]{26,33}$';
+
+  /// Ripple (XRP) Address Regex
+  /// Examples: rG1QQv2nh2gr7RCZ1P8YYcBUKCCN633jCn
+  static const Pattern rippleAddress = r'^r[0-9a-zA-Z]{24,34}$';
+
+  /// Dogecoin Address Regex
+  /// Examples: D5r2hrU1qJUzS9NBpZxkA6sZs6kKjA3vZc
+  static const Pattern dogecoinAddress = r'^[D9A][a-km-zA-HJ-NP-Z1-9]{25,34}$';
+
+  /// Monero Address Regex
+  /// Examples: 48bWuoDGAGY4o9c8ZC2XG3dQtrM7StJmqAsYHgw4x9qV6uW6t7P1AJVC3fUQ7m7G3yyMfA8GJmLt4zHYvstDQCQL6j9e9sS
+  static const Pattern moneroAddress = r'^[48][0-9AB][1-9A-HJ-NP-Za-km-z]{93}$';
+
+  /// Dash Address Regex
+  /// Examples: XwnLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPwg
+  static const Pattern dashAddress = r'^X[1-9A-HJ-NP-Za-km-z]{33}$';
+
+  /// Cardano Shelley Address Regex (starts with addr1)
+  /// Examples: addr1q9z06azdku5f8u20szctwegrv08c7l5psxx4c83n0nq3qkdjqw7zzg8v4ga2q9q8rpgz2c6x0nnpag6t0jx9cq4tgf6qg0ahz3
+  static const Pattern cardanoAddress = r'^addr1[0-9a-z]{58,}$';
+
+  /// Solana Address Regex
+  /// Examples: 4Nd1mYzGQj6PPZQZn5hVQ5AYy6AS2FoKZ5FBL2XRxYcB
+  static const Pattern solanaAddress = r'^[1-9A-HJ-NP-Za-km-z]{32,44}$';
+
+  /// Polkadot Address Regex
+  /// Examples: 12D3KooWM1rCZU4vT2LuXoYgB1T6PqvpmGJv8SBrC7oQQXvQUgZq
+  static const Pattern polkadotAddress = r'^[1-9A-HJ-NP-Za-km-z]{47,48}$';
+
+  /// Tron Address Regex
+  /// Examples: TQ5xAinUM2BV5EUD5L5EwbBeH6RBaJv1io
+  static const Pattern tronAddress = r'^T[1-9A-HJ-NP-Za-km-z]{33}$';
+
+  /// Binance Chain (BEP-20) Address Regex (Same as Ethereum)
+  /// Examples: 0x28C6c06298d514Db089934071355E5743bf21d60
+  static const Pattern binanceSmartChainAddress = r'^0x[a-fA-F0-9]{40}$';
+
+  /// Private Key (Ethereum-like 64 hex chars)
+  /// Examples: 4c0883a69102937d6231471b5dbb6204fe51296170827946d27b382e66ad4f4f
+  static const Pattern privateKeyHex = r'^[a-fA-F0-9]{64}$';
+
+  /// Transaction Hash (64 hex characters)
+  /// Examples: 0x5e2d3c57c0e58923a948e8cd5a1a8d5f50f5a5caa1bcf7d8a1de474f21f7915a
+  static const Pattern transactionHash = r'^0x([A-Fa-f0-9]{64})$';
+
+  /// BIP39 Mnemonic Regex (12 or 24 words)
+  /// Examples:
+  /// legal winner thank year wave sausage worth useful legal winner thank yellow
+  /// abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about
+  static const Pattern bip39Mnemonic =
+      r'^([a-z]+ ){11}[a-z]+$|^([a-z]+ ){23}[a-z]+$';
+
+  /// GSTIN (Goods and Services Tax Identification Number) - 15 characters
+  /// Format: 2 digit state code + 10-digit PAN + 1 entity code + 1 checksum
+  /// Example: 22AAAAA0000A1Z5
+  static const Pattern gstin =
+      r'^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$';
+
+  /// PAN (Permanent Account Number) - 10 characters
+  /// Format: 5 letters + 4 digits + 1 letter
+  /// Example: ABCDE1234F
+  static const Pattern pan = r'^[A-Z]{5}[0-9]{4}[A-Z]$';
+
+  /// Aadhaar (UIDAI 12-digit number)
+  /// Format: 12 digits, cannot start with 0 or 1
+  /// Example: 234567890123
+  static const Pattern aadhaar = r'^[2-9]{1}[0-9]{11}$';
+
+  /// IBAN (International Bank Account Number)
+  /// Supports general IBAN structure: 2 letters country code + 2 digits + up to 30 alphanumeric chars
+  /// Example: GB82WEST12345698765432
+  static const Pattern iban = r'^[A-Z]{2}[0-9]{2}[A-Z0-9]{11,30}$';
+
+  /// US SSN (Social Security Number) - Strict format: XXX-XX-XXXX
+  /// Invalid prefixes like 000, 666, and 900–999 are not allowed
+  /// Example: 123-45-6789
+  static const Pattern usSsnStrict =
+      r'^(?!000|666|9\d{2})\d{3}-(?!00)\d{2}-(?!0000)\d{4}$';
+
+  /// IFSC Code - 11 characters
+  /// Format: 4 letters (bank code) + 0 + 6-digit branch code
+  /// Example: SBIN0005943
+  static const Pattern ifsc = r'^[A-Z]{4}0[A-Z0-9]{6}$';
+
+  /// UPI ID Regex (e.g. mobile@upi or username@bank)
+  /// Accepts lowercase, digits, dot, dash, plus underscore in name; domain must be alphanumeric
+  /// Examples: test.user@okaxis, 1234567890@upi
+  static const Pattern upiId = r'^[a-z0-9.\-_+]{2,256}@[a-z]{2,64}$';
 }

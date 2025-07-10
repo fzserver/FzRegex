@@ -11,6 +11,7 @@ A comprehensive regex validation library for Dart/Flutter developers. Validate f
 - Dates & Times  
 - Passwords (Strong & Medium)  
 - Credit/Debit Cards  
+- Crypto Validators updated
 - And many more!  
 
 [![Pub Version](https://img.shields.io/pub/v/fzregex.svg)](https://pub.dev/packages/fzregex)  
@@ -65,7 +66,8 @@ FzRegex offers validation for a wide range of data formats, including:
 ### 💰 Financial
 - Credit/Debit Card Numbers  
 - Currency Formats  
-- Hash Formats: MD5, SHA1, SHA256  
+- Hash Formats: MD5, SHA1, SHA256
+- Crypto Currencies
 
 ### 🧩 Miscellaneous
 - Postal Codes  
@@ -125,3 +127,4 @@ Parth Aggarwal CEO & Developer at Frazile Inc.
 **Parth Aggarwal**  
 CEO & Developer at Frazile Inc.  
 [GitHub Profile](https://github.com/FrazileDevelopers)
+Follow me on [Linkedin Profile](https://www.linkedin.com/in/frazileinc)

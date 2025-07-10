@@ -1,3 +1,10 @@
+## 2.2.0 - 10 July 2025.
+### Fixed
+- Crypto Currencies Regex added
+- Indian TaxIDs Regex added
+- US IDs Regex added
+- Minor Fixes
+
 ## 2.1.1 - 27 December 2024.
 ### Fixed
 - Minor Fixes
